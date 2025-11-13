@@ -1,7 +1,7 @@
 # Declaring variables
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
-operation = input("Choose the opertion (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 
 # Perform calculation using match case
 match operation:
