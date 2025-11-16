@@ -6,23 +6,20 @@ time_bound  = input("Is it time-bound? (yes/no): ").lower()
 # Use match case to Process the Task Based on Priority and Time Sensitivity
 match task_priority:
     case "high":
-        if time_bound == "yes" or  "y":
-            print(f"Reminder: '{task}' is a high priority task that requires immediate attention today!")
-        elif time_bound == "no" or "n":
-            print(f"Reminder: '{task}' is a high priority task!")
-        else:
-            print("Time bound is either 'yes' or 'no'")
+        message = f"Reminder: '{task}' is a high priority task"
     case "medium":
-        if time_bound == "yes" or "y":
-            print(f"Note: '{task}' is a medium priority task that requires attention!")
-        elif time_bound == "no" or "n":
-            print(f"Note: '{task}' is a medium priority task.")
-        else:
-            print("Time bound is either 'yes' or 'no'")
+        message = f"Reminder: '{task}' is a medium priority task"
     case "low":
-        if time_bound == "yes" or "y":
-            print(f"Note: '{task}' is a low priority task that requires attention!")
-        elif time_bound == "no" or "n":
-            print(f"Note '{task}' ia a low priority task. Consider completing it when you have a free time.")
-        else:
-            print("Time bound is either 'yes' or 'no'")
+        message = f"Note: '{task}' is a low priority task"
+    case _:
+        print("Task priority should be either 'high', 'medium' or 'low'!")
+         
+# use if statement tomodifynthetask if time is bound
+if time_bound == "yes" or time_bound == "y":
+    message += "that requires immediate attention today!"
+elif time_bound == "no" or time_bound == "n":
+    message += ". Consider completing it when you have free time"
+else:
+    print("Time-bound should be either 'yes' or  'no'!")
+        
+print(f"{message}")   
