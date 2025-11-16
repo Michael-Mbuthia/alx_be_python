@@ -16,6 +16,7 @@ match task_priority:
         message = f"Note: '{task}' is a low priority task"
     case _:
         print("Task priority should be either 'high', 'medium' or 'low'!")
+        exit()
          
 # use if statement tomodifynthetask if time is bound
 if time_bound == "yes" or time_bound == "y":
@@ -24,5 +25,6 @@ elif time_bound == "no" or time_bound == "n":
     message += ". Consider completing it when you have free time"
 else:
     print("Time-bound should be either 'yes' or  'no'!")
+    exit()
         
 print(f"{message}")   
