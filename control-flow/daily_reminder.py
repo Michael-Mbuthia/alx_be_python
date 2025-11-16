@@ -3,6 +3,9 @@ task = input("Enter your task: ")
 task_priority = input("Priority (high/medium/low): ").lower()
 time_bound  = input("Is it time-bound? (yes/no): ").lower()
 
+# Initialize task reminder
+message = ""
+
 # Use match case to Process the Task Based on Priority and Time Sensitivity
 match task_priority:
     case "high":
