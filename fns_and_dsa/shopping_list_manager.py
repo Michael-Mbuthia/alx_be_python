@@ -1,12 +1,12 @@
 shopping_list = []
 
-# Function to add item"
+# Function to add item
 def add_item():
-    task = input("Enter a new task: ")
+    task = input("Enter the item to add: ")  # Updated prompt
     shopping_list.append(task)
     print("Task added successfully.")
     
-# Function to view item"
+# Function to view item
 def view_list():
     if len(shopping_list) == 0:
         print("no tasks")
@@ -15,7 +15,7 @@ def view_list():
         for i, task in enumerate(shopping_list):
             print(f"{i+1}. {task}")
             
-# Function to remove item"
+# Function to remove item
 def remove_item():
     if len(shopping_list) == 0:
         print("no tasks to delete.")
@@ -46,6 +46,7 @@ def main():
     while True:
         display_menu()
         choice = int(input("Enter your choice: "))
+        
         if choice == 1:
             add_item()
         elif choice == 2:
@@ -58,7 +59,6 @@ def main():
         else:
             print("Invalid choice. Please try again.")
             
-            
 if __name__ == "__main__":
     main()
 
@@ -67,4 +67,3 @@ if __name__ == "__main__":
 
 
 
-    
