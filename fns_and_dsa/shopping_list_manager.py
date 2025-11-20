@@ -1,13 +1,13 @@
 shopping_list = []
 
 # Function to add task"
-def add_task():
+def add_item():
     task = input("Enter a new task: ")
     shopping_list.append(task)
     print("Task added successfully.")
     
 # Function to view tasks"
-def view_tasks():
+def view_list():
     if len(shopping_list) == 0:
         print("no tasks")
     else: 
@@ -16,7 +16,7 @@ def view_tasks():
             print(f"{i+1}. {task}")
             
 # Function to delete task"
-def delete_task():
+def remove_item():
     if len(shopping_list) == 0:
         print("no tasks to delete.")
     else:
@@ -33,24 +33,25 @@ def delete_task():
             print("Invalid task number.")
             
 
+def display_menu():
+        print("====== Shopping List =====")
+        print("1. Add Item")
+        print("2. Remove Item")
+        print("3. View list")
+        print("4. Exit")
 def main():
-
+    shopping_list = [] 
     while True:
-        print("====== Task Tracker Application =====")
-        print("1. Add task")
-        print("2. View task")
-        print("3. Delete task")
-        print("4. Quit")
-        
+        display_menu()
         choice = int(input("Enter your choice: "))
         if choice == 1:
-            add_task()
+            add_item()
         elif choice == 2:
-            view_tasks()
+            remove_item()
         elif choice == 3:
-            delete_task()
+            view_list()
         elif choice == 4:
-            print("Thank you for using the Task Tracker Application")
+            print("Goodbye")
             break
         else:
             print("Invalid choice. Please try again.")
