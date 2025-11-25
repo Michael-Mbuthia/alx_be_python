@@ -26,7 +26,7 @@ class BankAccount:
         return f"Withdrew: ${amount:.2f}"
 
     def display_balance(self):
-        return f"Your balance is ${self.account_balance:.2f}"
+        return f"Current Balance: ${self.account_balance:.2f}"
 
     def __repr__(self):
-        return f"BankAccount(balance={self.account_balance:.2f})"
+        return f"BCurrent Balance: ${self.account_balance:.2f})"
