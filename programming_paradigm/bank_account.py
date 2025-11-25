@@ -21,12 +21,15 @@ class BankAccount:
         if amount <= 0:
             return "Withdrawal amount must be positive"
         if amount > self.account_balance:
-            return "Insufficient funds"
+            return "Insufficient funds."
         self.account_balance -= amount
         return f"Withdrew: ${amount:.2f}"
 
     def display_balance(self):
-        return f"Current Balance: ${self.account_balance:.2f}"
+        # Print the balance so tests that capture stdout receive the expected output
+        msg = f"Current Balance: ${self.account_balance:.2f}"
+        print(msg)
+        return msg
 
     def __repr__(self):
-        return f"BCurrent Balance: ${self.account_balance:.2f})"
+        return f"BankAccount(balance=${self.account_balance:.2f})"
