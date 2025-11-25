@@ -20,7 +20,7 @@ class BankAccount:
             return "Invalid amount"
         if amount <= 0:
             return "Withdrawal amount must be positive"
-        if self.account_balance < amount:
+        if amount > self.account_balance:
             return "Insufficient funds"
         self.account_balance -= amount
         return f"Withdrew: ${amount:.2f}"
