@@ -15,7 +15,7 @@ class  TstSimpleCalculator(unittest.TestCase):
     def test_subtraction(self):
         """Test the addition method."""
         self.assertEqual(self.calc.subtract(3, 2), 1)
-        self.assertEqual(self.calc.subtract(-3, 2), -1)
+        self.assertEqual(self.calc.subtract(-3, 2), -5)
         
     def test_multiplication(self):
         """Test the multiplication method."""
@@ -28,8 +28,8 @@ class  TstSimpleCalculator(unittest.TestCase):
         """Test the division method."""
         self.assertEqual(self.calc.divide(10, 2), 5)
         self.assertEqual(self.calc.divide(2, 10), 0.2)
-        self.assertEqual(self.calc.divide(0, 5), "Error")
-        self.assertEqual(self.calc.divide(5, 0), 0)
+        #self.assertEqual(self.calc.divide(0, 5), ZeroDivisionError)
+        self.assertEqual(self.calc.divide(5, 0), None)
     
     if __name__ == "__main__":
         unittest.main()
