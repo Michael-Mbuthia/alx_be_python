@@ -10,7 +10,7 @@ class BankAccount:
             return "Deposit amount must be positive"
         else:
             self.account_balance += amount
-            return f"Deposited: ${amount}"
+            return f"Deposited: ${amount:.2f}"
 
     def withdraw(self, amount=20):
         if amount <= 0:
@@ -18,7 +18,7 @@ class BankAccount:
         if amount > self.account_balance:
             return "Insufficient funds."
         self.account_balance -= amount
-        return f"Withdrew: ${amount}"
+        return f"Withdrew: ${amount:.2f}"
 
     def display_balance(self):
         # Print the balance so tests that capture stdout receive the expected output
