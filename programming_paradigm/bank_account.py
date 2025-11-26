@@ -22,6 +22,6 @@ class BankAccount:
 
     def display_balance(self):
         # Print the balance so tests that capture stdout receive the expected output
-        msg = f"Current Balance: ${self.account_balance}"
+        msg = f"Current Balance: ${self.account_balance:.2f}"
         print(msg)
         return msg
