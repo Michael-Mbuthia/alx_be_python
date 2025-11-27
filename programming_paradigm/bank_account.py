@@ -5,14 +5,14 @@ class BankAccount:
             raise ValueError("Initial balance cannot be negative")
         self.account_balance = float(account_balance)
 
-    def deposit(self, amount=50):
+    def deposit(self, amount):
         if amount <= 0:
             return "Deposit amount must be positive"
         else:
             self.account_balance += amount
             return f"Deposited: ${amount:.2f}"
 
-    def withdraw(self, amount=20):
+    def withdraw(self, amount):
         if amount <= 0:
             return "Withdrawal amount must be positive"
         if amount > self.account_balance:
@@ -25,3 +25,6 @@ class BankAccount:
         msg = f"Current Balance: ${self.account_balance:.2f}"
         print(msg)
         return msg
+
+    def main():
+        amount = float(input("Enter amount: "))
